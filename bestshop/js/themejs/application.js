@@ -261,7 +261,9 @@ if($('#slider').length){
 			range.children('.min_value').val(min).next().val(max);
 
 			range.children('.min_val').text('$' + min).next().text('$' + max);
-
+			range.children('#min_val').val(min);
+			range.children('#max_val').val(max);
+			
 		},
 
 		create : function(event, ui){
@@ -272,6 +274,8 @@ if($('#slider').length){
 				range = $this.siblings('.range');
 
 			range.children('.min_value').val(min).next().val(max);
+			range.children('#min_val').val(min);
+			range.children('#max_val').val(max);
 
 			range.children('.min_val').text('$' + min).next().text('$' + max);
 			
@@ -410,7 +414,84 @@ $(function ($) {
 /* ---------------------------------------------------
 	Owl carousel - Slider
 -------------------------------------------------- */
+$(document).ready(function ($) {
+	"use strict";
+	// Content slider
+	$('.yt-content-slider').each(function () {
+		var $slider = $(this),
+			$panels = $slider.children('div'),
+			data = $slider.data();
+		// Remove unwanted br's
+		//$slider.children(':not(.yt-content-slide)').remove();
+		// Apply Owl Carousel
+		
+		$slider.owlCarousel2({
+			responsiveClass: true,
+			mouseDrag: true,
+			video:true,
+    		lazyLoad: (data.lazyload == 'yes') ? true : false,
+			autoplay: (data.autoplay == 'yes') ? true : false,
+			autoHeight: (data.autoheight == 'yes') ? true : false,
+			autoplayTimeout: data.delay * 1000,
+			smartSpeed: data.speed * 1000,
+			autoplayHoverPause: (data.hoverpause == 'yes') ? true : false,
+			center: (data.center == 'yes') ? true : false,
+			loop: (data.loop == 'yes') ? true : false,
+            dots: (data.pagination == 'yes') ? true : false,
+            nav: (data.arrows == 'yes') ? true : false,
+			dotClass: "owl2-dot",
+			dotsClass: "owl2-dots",
+            margin: data.margin,
+            navText: ['',''],
+			
+			responsive: {
+				0: {
+					items: data.items_column4 
+					},
+				480: {
+					items: data.items_column3
+					},
+				768: {
+					items: data.items_column2
+					},
+				992: { 
+					items: data.items_column1
+					},
+				1200: {
+					items: data.items_column0 
+					}
+			}
+		});
+		
+	});
+	
+	/*function buttonpage(element){
+		var $element = $(element),
+			$slider = $(".yt-content-slider", $element),
+			data = $slider.data();
+		if (data.buttonpage == "top") {
+			$(".owl2-controls",$element).insertBefore($slider);
+			$(".owl2-dots",$element).insertAfter($(".owl2-prev", $slider));
+		} else {
+			$(".owl2-nav",$element).insertBefore($slider);
+			$(".owl2-controls",$element).insertAfter($slider);
+		}	
+	}
+	
+	// Home 1 - Latest Blogs
+	(function (element) {
+		buttonpage(element);
+	})(".blog-sidebar");
+	
+	(function (element) {
+		buttonpage(element);
+	})("#so_extra_slider_1");
+	
+	(function (element) {
+		buttonpage(element);
+	})("#so_extra_slider_2");*/
 
+}); 
 
 /* ---------------------------------------------------
 	Other Query

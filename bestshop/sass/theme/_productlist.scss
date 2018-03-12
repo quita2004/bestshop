@@ -79,7 +79,7 @@
         .fa-star-o:before{content: "\f005"; color: #bbb;}
         .fa-stack-1x{font-size: 12px;}
         .fa-star.fa-stack-1x{ position: relative; z-index: 1; 
-            &:before{content: "\f005";color: #ff9600;}
+            &:before{content: "\f005";color: $linkColor;}
         }
     }
 }
@@ -96,7 +96,7 @@ span.fa-stack{width: 10px; height: 10px; line-height: 10px; font-size: 0; margin
 .price{
     margin: 0 0 10px 0;
     line-height: 24px;
-    color: $linkColor;
+    color: #ff3c20;
     font-size: 16px;
     font-weight: 600;
     .price-old{
@@ -109,7 +109,7 @@ span.fa-stack{width: 10px; height: 10px; line-height: 10px; font-size: 0; margin
         font-weight: normal;
     }
     .price-new, span.price{
-        color: $linkColor;
+        color: #ff3c20;
         @include rem(font-size,16px);
         font-weight: 700;
     }
@@ -119,7 +119,7 @@ span.fa-stack{width: 10px; height: 10px; line-height: 10px; font-size: 0; margin
 /*==================== COUNT DOWN BOX ====================*/
 .countdown_box{ 
     position: absolute;
-    top: 50%;
+    top: 49%;
     margin-top: -28px;
     left: 50%;
     width:210px;
@@ -140,40 +140,44 @@ span.fa-stack{width: 10px; height: 10px; line-height: 10px; font-size: 0; margin
 /*====================PRODUCT CATEGORY ====================*/
 
 
-.products-category{
-    .img-cate{
-
-    }
-    .filter_group{width: 25%;display: inline-block;vertical-align: top;}
-    .category-info{
-        .form-group{
-            margin: 0;
-            > p{
-                margin: 0;
+.all-categories{
+    
+    .box-categories{
+        margin-#{$left}: -15px;
+        margin-#{$right}: -15px;
+        overflow: hidden;
+        .category{
+            width: 20%;
+            display: inline-block;
+            float: $left;
+            text-align: center;
+            padding: 0 15px;
+            margin-bottom: 30px;
+            a{
+                display: block;
+                background: #f7f7f7;
+                overflow: hidden;
+                color: #222;
+                text-transform: uppercase;
+                h4{
+                    font-size: 14px;
+                }
+                &:hover{
+                    color: $linkColor;
+                    img{
+                        opacity: 0.8;
+                    }
+                }
+            }
+        }
+        &.box-categories2{
+            .category{
+                width: 16.6666666%;
             }
         }
     }
 } 
-.title-category{
-    @include rem(font-size,18px);
-    text-transform: uppercase;
-    color: #222;
-    border-bottom: 2px solid #eeeeee;
-    display: inline-block;
-    width: 100%;
-    position: relative;
-    margin-top: 0;
-    padding-bottom: 10px;
-    &:after{
-        position: absolute;
-        content: "";
-        width: 110px;
-        height: 2px;
-        background-color: $background;
-        bottom: -2px;
-        #{$left}: 0;
-    }
-}
+
 
 .products-category .form-group{   
     .short-by{
@@ -183,6 +187,36 @@ span.fa-stack{width: 10px; height: 10px; line-height: 10px; font-size: 0; margin
 .refine-search{
     .thumbnail{margin-bottom: 10px;}
     a{@include linkGray(); display: block;}
+}
+
+/*FEATURED BRANDS*/
+.featured-brands{
+    margin-bottom: 50px;
+    position: relative;
+    .box-brands{
+        .extraslider-inner{
+            position: static;
+        }
+        .item img{
+            opacity: 0.5;
+            @include transition(all 0.3s ease);
+            &:hover{
+                opacity: 1;
+            }
+        }
+        .owl2-controls{
+            .owl2-nav{
+                @include owl2-nav-style8(20px,20px,26px);
+
+                > div {
+                    &:after{
+                        display: none;
+                    }
+                }
+            }
+
+        } 
+    }
 }
     
 /*TOOLBAR LISTING TOP*/
@@ -247,16 +281,11 @@ span.fa-stack{width: 10px; height: 10px; line-height: 10px; font-size: 0; margin
             line-height: 33px;
             padding: side-values(0px 20px 0 10px);
             background-color: #fff;
-            /*position: relative;
-            &:after{
-                position: absolute;
-                font-family: FontAwesome;
-                content: "\f107";
-                font-size: 14px;
-                top: 0;
-                #{$right}: 0;
-                color: #747474;
-            }*/
+            
+            &#input-sort{
+                float: $left;
+                border-#{$right}: none;
+            }
             &:hover{
                 cursor: pointer;
             }
@@ -280,30 +309,31 @@ span.fa-stack{width: 10px; height: 10px; line-height: 10px; font-size: 0; margin
 }
 
 .box-pagination{
-    .pagination > li{
-        margin: 0 3px;
-        &:hover,
-        &.active{
-            span,
-            a{
-                border-color: $background;
-                background-color: $background;
-                color: #fff;
+    .content-pagination1{
+        display: inline-block;
+        float: $right;
+        height: 33px;
+        line-height: 33px;
+        span{
+            float: $left;
+        }
+        .pagination1{
+            display: inline-block;
+            overflow: hidden;
+            float: $left;
+            
+            li{
+                display: inline-block;
+                float: $left;
+                padding: 0 10px;
+                &.active{
+                    color: $linkColor;
+                }
             }
         }
-        span,
-        a{
-            text-align: center;
-            width: 33px;
-            height: 33px;
-            line-height: 33px;
-            @include border-radius(3px);
-            padding: 0;
-        }
     }
-    .pagination{
-        display: block;
-    }
+    
+
 }
 
 /*================ PRODUCT LIST ===================*/
@@ -463,7 +493,8 @@ button{
                     }
                     h4{
                         margin: 3px 0;
-                        font-weight: 400;
+                        font-weight: 700;
+
                         a{
                             font-size: 14px;
                             color: #222;
@@ -473,6 +504,9 @@ button{
                         }
                     } 
                     .rating, .ratings{margin-bottom: 2;}
+                    .quickview{
+                        display: none!important;
+                    }
     
                 }
                 &:hover{  
@@ -577,21 +611,23 @@ button{
         }
         .product-item-container{ 
             display: table;
+            padding-bottom: 30px;
             margin-bottom: 30px;
-
+            border-bottom: 1px solid #ebebeb;
+            position: relative;
             .left-block{
                 width: 270px;
                 @include breakpoint(xs){width:40%;}
                 float: $left;
                 border: 1px solid $base-border-color;
                 .product-image-container{ text-align: center; }
-                .button-group{display: none;}
+                .button-group button{display: none;}
             }
             .list-block{
                
                 @include breakpoint(xs){margin-#{$left}: 0;padding:  10px 0 0 ; clear:both; overflow:hidden;}
                 .btn-button{
-                    border: 1px solid #eaeaea;
+                    border: none;
                     border-radius: 3px;
                     display: block;
                     margin-#{$right}: 5px;
@@ -604,14 +640,13 @@ button{
                         font-size: 16px;
                     }
                     &:hover{
-                        background-color: $background;
-                        border-color: $background; 
+                        background-color: $linkColor;
                         color: #fff;
                     }
                 }
                 .addToCart{ 
-                    background-color: $background;
-                    border-color: $background;                       
+                    background-color: $gray;
+                    margin-bottom: 10px;                
                     color: #fff;
                     border-radius: 3px;
                     @include rem(font-size,12px);                        
@@ -621,40 +656,104 @@ button{
                         margin-#{$right}: 0px; font-size:14px;
                     }
                     &:hover{
-                        background-color: $gray;
-                        border-color: $gray;   
+                        background-color: $linkColor;
+                           
                     }           
                 }
+
+                .wishlist{
+                    position: absolute;
+                    top: 40px;
+                    #{$left}: -61px;
+                    background-color: $gray;
+                    color: #fff;
+                    &:hover{
+                        background-color: $linkColor;
+                           
+                    }  
+                }
+
             }
       
            
          
             .right-block{
                 margin-#{$left}: 270px;
-                padding: side-values(0 20px 0px 30px);
+                height: 270px;
+                padding: side-values(0 0 0px 30px);
                 @include breakpoint(xs){margin-#{$left}: 40%; padding: 0 10px 0px 10px;}
-                
-                    .ratings{
-                        margin-bottom: 0px;
-                    }
-                    h4{
-                        margin-bottom: 5px;
-                        font-weight: 400;
-                        a{
-                            color: #444;
-                            @include rem(font-size,16px);
-                            &:hover{
-                                color: $linkColor;
+                    
+                    .caption{
+                        width: 70%;
+                        float: $left;
+                        padding-#{$right}: 15px;
+                        padding-top: 40px;
+                        .ratings{
+                            margin-bottom: 0px;
+                        }
+                        h4{
+                            margin-bottom: 5px;
+                            font-weight: 700;
+                            
+                            a{
+                                color: #222;
+                                @include rem(font-size,18px);
+                                &:hover{
+                                    color: $linkColor;
+                                }
                             }
                         }
+                        .price{
+                            display: none;
+                            
+                        }
+                        .description{
+                            margin-bottom: 20px;
+                            @include breakpoint(xs){ display: none;}
+                        }
                     }
-                    .price{
-                        display: inline-block;
-                        margin: 8px 0 8px 0;
+
+                    .list-block{
+                        width: 30%;
+                        height: 100%;
+                        float: $left;
+                        padding-#{$left}: 15px;
+                        padding-top: 40px;
+                        position: relative;
+                        border-#{$left}: 1px solid #ebebeb;
+                        .item-available{
+                            padding-bottom: 15px;
+                            margin-bottom: 20px;
+                            border-bottom: 1px solid #ebebeb;
+                        }
+                        .price{
+                            margin-bottom: 20px;
+                        }
                     }
-                    .description{
-                        margin-bottom: 20px;
-                         @include breakpoint(xs){ display: none;}
+                    .quickview{
+                        display: none!important;
+                        border: none;
+                        border-radius: 3px;
+                        display: block;
+                        margin-#{$right}: 5px;
+                        padding: 7px 15px ;
+                        background-color: $gray;
+                        color: #fff;
+                        text-align: center;
+                        float: $left;
+                        position: absolute;
+                        top: 50%;
+                        left: 0;
+                        opacity: 0;
+                        @include transform(translateY(-50%));
+                        @include transition(all 0.3s ease);
+                        i{
+                            font-size: 16px;
+                        }
+                        &:hover{
+                            background-color: $linkColor;
+                            color: #fff;
+                        }
                     }
             }
             @include breakpoint(xs){
@@ -662,7 +761,15 @@ button{
                     display: none;
                 }         
             }
-            
+            &:hover{
+                .right-block{
+                    .quickview{
+                        opacity: 1;
+                        left: 109px;
+                        display: block!important;
+                    }
+                }
+            }
         }
            
     }    

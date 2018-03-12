@@ -5,7 +5,7 @@ require_once ('scssphp/scss.inc.php');
 use Leafo\ScssPhp\Compiler;
 use Leafo\ScssPhp\Server;
  $themeCssName='';  
- $ColorScheme = '#ff3c20';
+ $ColorScheme = '#2677e7';
  $themeColor = strtolower($ColorScheme);
         
 $scss = new Compiler();

@@ -67,6 +67,37 @@
             text-transform: uppercase;
         }
     } 
+
+    h3.modtitle2{           
+        font-size: 18px;
+        color: #222;
+        font-weight: 700;
+        position: relative;
+        padding-bottom: 10px;
+        margin-bottom: 30px;
+        text-transform: uppercase;
+        &:after{
+            position: absolute;
+            content: "";
+            width: 100%;
+            height: 2px;
+            background-color: #eee;
+            bottom: 0;
+            #{$left}: 0;
+            
+        }
+        &:before{
+            position: absolute;
+            content: "";
+            width: 150px;
+            height: 2px;
+            background-color: $linkColor;
+            bottom: 0;
+            #{$left}: 0;
+            z-index: 2;
+        }
+        
+    }
 }
 .content-aside{
     .module {
@@ -91,7 +122,7 @@
             }
         } 
         .modcontent{
-            padding: 15px 20px;
+            padding: 15px;
         }
         &#blog-search{
             border: none;
@@ -106,11 +137,11 @@
 	.list-group{ @extend ul.blank;
 		> li{border-bottom: 1px dotted #e4e4e4;margin: 0; position: relative;
 			//Menu level1 		
-			span.button-view {display: block;position: absolute;#{$right}: 0;top: 5px;cursor: pointer; z-index: 10;text-align: center; width: 30px; height: 30px;line-height: 30px; font-size: 14px;}
+			span.button-view {display: block;position: absolute;#{$right}: 0;top: 0;cursor: pointer; z-index: 10;text-align: center; width: 30px; height: 30px;line-height: 30px; font-size: 14px;}
 			a{@include linkGrayDark();padding: 10px 0; display: block;}
 			a:hover + .button-view{color: $linkColor;}
 		     .active,.active + .button-view{color: $linkColor;}
-			.active + .button-view:before{content: '\f147';}
+			.active + .button-view:before{content: '\f0dd';}
 			//Menu level2
 			ul{@extend ul.blank;}
 			li{padding: 0;position: relative; list-style: none;
@@ -484,8 +515,37 @@ ul.breadcrumb {
 
 .content-aside .product-simple{
     position: relative;
+    h3.modtitle{
+        position: relative;
+        font-size: 16px;
+        font-weight: 700;
+        color: #222222;
+        text-transform: uppercase;
+        padding-bottom: 15px;
+        &:after{
+            content: "";
+            display: block;
+            width: 100%;
+            height: 2px;
+            position: absolute;
+            bottom: 0;
+            #{$left}: 0;
+            background: #eeeeee;
+        }
+        &:before{
+            content: "";
+            display: block;
+            width: 130px;
+            height: 2px;
+            position: absolute;
+            bottom: 0;
+            #{$left}: 0;
+            background: $linkColor;
+            z-index: 2;
+        }
+    }
     .modcontent{
-        padding: 15px 10px;
+        padding: 15px 0;
     }
     .so-quickview{
         display: none;
@@ -495,41 +555,22 @@ ul.breadcrumb {
         .owl2-controls{
             .owl2-dots{
                 @include owl2-dot-style(8px,8px,#222);
-                #{$right}: 10px;
-                top: 18px;
+                #{$right}: 0;
+                top: 5px;
                 min-width: 60px;
             }
-            .owl2-nav{
-                top: 1px; position: absolute;
-                #{$right}: 0px ;
-                @include owl2-nav-style(30px,18px,#222);
-                > div{
-                    margin-top: 0;
-                    line-height: 28px ;
-                    &:before{
-                        position: static;
-                        font-weight: 400;
-                    }
-                }
-                
-            }
+            
         }
-        &:hover{
-            .owl2-controls{
-                .owl2-nav > div{     
-                    /*@include transform(scale(1));          
-                    @include effect-block-show();*/
-                }
-            }
-        }
+        
         .extraslider-inner{
+            position: static;
             .item {
                 .item-inner{
                     display: inline-block;
-                    padding-bottom: 10px;
-                    margin-bottom: 10px;
+                    
+                    margin-bottom: 30px;
                     width: 100%;
-                    border-bottom: 1px solid $base-border-color;
+                    
                     &:last-child{
                         border-bottom: none;
                         margin-bottom: 0;
@@ -1258,8 +1299,8 @@ ul.breadcrumb {
 }
 .filter-shopby{
 	.table_layout{display: block;}
-	.table_cell{margin-bottom: 10px;padding-bottom: 20px;border-bottom: #f1f1f1 1px solid;display: block;}
-	legend{border: none;font-size: 13px;margin: 0;text-transform: uppercase;}
+	.table_cell{margin-bottom: 10px;padding-bottom: 20px;display: block;}
+	legend{border: none;font-size: 14px;margin: 0;text-transform: uppercase;font-weight: 700; color: #222;padding-bottom: 20px;border-bottom: 1px solid #d7d7d7;margin-bottom: 20px;}
 	.checkboxes_list,.simple_vertical_list{@extend ul.blank;}
 	.checkboxes_list > li:not(:last-child), .simple_vertical_list li:not(:last-child) {
 	    margin-bottom: 5px; 
@@ -1304,40 +1345,105 @@ ul.breadcrumb {
 
 	.ui-slider{
 		height: 7px;
-		background: #f8f8f8;
+		background: $linkColor;
 		border:1px solid #eaeaea;
 		max-width: 220px;
 	}
-
+    
+    .ui-slider-horizontal .ui-slider-range{
+        background: #555;
+    }
 	.ui-slider .ui-slider-handle{
 		display: block;
 		width: 19px;
 		height: 19px;
-		background: #fff;
-		border: 1px solid #eaeaea;
+		background: $linkColor;
+		border-radius: 50%;
 		cursor: pointer;
 		top: -7px;
 	}
 
-	.ui-slider .ui-slider-handle::before{
-		content: "";
-		display: block;
-		width: 9px;
-		height: 9px;
-		background: #b2b2b2;
-		position: absolute;
-		top: 4px;
-		left: 4px;
-	}
 
-	.ui-slider .ui-slider-handle,
-	.ui-slider .ui-slider-handle::before{ border-radius: 50%; }
-
-	.range{ margin-bottom: 15px; }
+	.range{ margin-top: 15px; }
+    .bock-range{
+        display: block;
+        overflow: hidden;
+        margin: 20px 0;
+        position: relative;
+        input{
+            width: 45%;
+            height: 35px;
+            line-height: 35px;
+            text-align: center;
+            color: #222;
+            font-size: 16px;
+            border: 1px solid #d7d7d7;
+            border-radius: 3px;
+            float: $left;
+            &:last-child{
+                float: $right;
+            }
+        }
+        &:after{
+            content: "";
+            width: 10px;
+            height: 2px;
+            display: block;
+            position: absolute;
+            background: #555555;
+            bottom: 50%;
+            #{$right}: 50%;
+            @include transform(translate(50%, 50%));
+        }
+    }
+    button.filter{
+        margin-top: 20px;
+        background: #222;
+        color: #fff;
+        text-transform: uppercase;
+        border-radius: 3px;
+        &:hover{
+            color: #d7d7d7;
+        }
+    }
 
 	.range > *{ display: inline; }
 
 	.checkboxes_list{ color: #333; }
+
+    ul.size{
+
+        text-align: center;
+        li{
+            display: inline-block;
+            border: 1px solid #e8e8e8;
+            width: 30px;
+            height: 30px;
+            line-height: 30px;
+            &:hover{
+                background: $linkColor;
+                a{
+                    color: #fff;
+                }
+                
+            }
+        }
+    }
+    ul.color{
+        text-align: center;
+        li{
+            display: inline-block;
+            width: 30px;
+            height: 30px;
+            padding: 1px;
+            border: 1px solid #e8e8e8;
+            a{
+                width: 100%;
+                height: 100%;
+                display: block;
+            }
+        }
+    }
 
 .simple_vertical_list,
 .checkboxes_list{
@@ -1364,11 +1470,11 @@ ul.breadcrumb {
 		position: absolute;
 		#{$left}: 0;
 		top: -1px;
-		width:22px;
-		height:22px;
+		width:25px;
+		height:20px;
 		color:inherit;
-		background:#fff;
-		border:1px solid #eaeaea;
+		background:#f5f5f5;
+		
 		border-radius: 3px;
 	}
 
@@ -1382,7 +1488,7 @@ ul.breadcrumb {
 		margin: 0px ;
 	}
 
-	input[type="checkbox"]:checked + label::before{ content: '\f00c'; }
+	input[type="checkbox"]:checked + label::before{ background: url("../image/icon/checkbox.png") no-repeat;}
 
 	input[type="radio"]:checked + label::before{ content: "\f10c"; }
 }	

@@ -67,22 +67,35 @@
             }
             
         }
-        .product-label{overflow: hidden;
+        .product-label{
+            overflow: hidden;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #eee;
+            margin-bottom: 20px;
             .price{
             font-size: 24px;font-weight: 600;
                 @include breakpoint(lg){float: $left;}
             }
-            .stock{@include breakpoint(lg){float: $right;}
-                .status-stock{color: #00abf0;
-                    &:before{content: "\f046"; font-family: FontAwesome; display: inline-block; color: #00abf0;margin-right: 5px; margin-left: 10px;}
-                } 
-            }
+            
             .short-description{}
+        }
+        .stock{
+
+            .status-stock{color: #00abf0;
+                &:before{content: "\f046"; font-family: FontAwesome; display: inline-block; color: #00abf0;margin-right: 5px;}
+            } 
+            .code-product{
+                margin-#{$left}: 20px;
+                text-transform: uppercase;
+            }
+        }
+        .brand-product{
+            margin: 20px 0;
         }
     
         #product{float: left; width: 100%;margin-top: 10px;
             h3{margin-top: 0;}
-            .image_option_type label.control-label{margin-right: 10px; margin-top: 3px;}
+            .image_option_type label{font-weight: 700;padding-#{$right}: 5px;font-size: 14px;color: #222; text-transform: uppercase;}
             .product-options{
                 .img-thumbnail{width: 22px; height: 22px; border-radius: 0; padding: 1px;}
             }
@@ -97,14 +110,30 @@
                 button:hover{background: $background; color: #fff;}
             }
         }
-        .box-info-product{float: $left; width: 100%;
-            .quantity .quantity-control{float: $left;margin: 0;background: #eee;padding: 4px 10px;position: relative;
-                label{float: $left;font-weight: normal;margin-top: 8px;padding-#{$right}: 5px;}
-                input.form-control{float: $left;height: 33px;line-height: 31px;margin: 0;margin-#{$right}: 17px;padding: 0 10px; width: 35px;border: 1px solid #bdc2c9; border-radius: 0; z-index: 0;}
-                span{border: 0 none;color: white;float: $left;font-size: 10px;font-weight: normal;margin-#{$left}: 5px; border-radius: 0; cursor: pointer;line-height: 16px;
-                    &.product_quantity_up{background: none repeat scroll 0 0 #444444;padding: 0 4px;position: absolute;#{$right}: 14px;top: 4px;height: 16.5px;width: 14px;}
-                    &.product_quantity_down{background: none repeat scroll 0 0 #444444;font-size: 13px;padding: 0 4px;position: absolute;#{$right}: 14px;top: 21px;width: 14px;height: 15.5px;line-height: 15px;}
-                    &:hover{background: $background;}
+        .box-info-product{float: $left; width: 100%; margin-top: 25px;
+            label{float: $left;font-weight: 700;font-size: 14px;color: #222; text-transform: uppercase;margin: 0;
+                padding-#{$right}: 15px; line-height: 40px;}
+            .quantity .quantity-control{float: $left;margin: 0;position: relative;
+                
+
+                input.form-control{float: $left;height: 40px;line-height: 40px;margin: 0; width: 100px;border: 1px solid #bdc2c9; border-radius: 0; z-index: 0;    padding: 0 35px;text-align: center;}
+
+                span{
+                    position: absolute;
+                    display: block;
+                    overflow: hidden;
+                    line-height: 40px;
+                    background: none;
+                    border: none;
+                    width: 40px;
+                    padding: 0;
+                    cursor: pointer;
+                    &.product_quantity_down{
+                        #{$left}: 0;
+                    }
+                    &.product_quantity_up{
+                        #{$right}: 0;
+                    }
                 }
             }
             .cart{float: $left;margin-#{$right}: 10px;
@@ -117,10 +146,55 @@
             }
             .add-to-links {
                 
-                ul li a{display: inline-block;padding: 10px 15px;font-size: 14px; color: $textBody;
-                border: 1px solid #e6e6e6;cursor: pointer;
-                    &.text{display: none;}
-                    &:hover{border-color: $linkColor; color: $linkColor;}
+                ul {
+                    float: $right;
+                    li a{display: inline-block;padding: 9px 15px;font-size: 14px; color: $textBody;
+                        border: 1px solid #e6e6e6;cursor: pointer;    transition: none;
+
+                        &.text{display: none;}
+                        &:hover{background: $linkColor; color: #fff;}
+                    }
+                }
+                
+            }
+        }
+
+        .content-product-bottom{
+            span{
+                color: #222;
+                font-weight: 700;
+                text-transform: uppercase;
+            }
+            .share{
+                .icon-share{
+                    overflow: hidden;
+                    margin-top: 10px;
+                    ul li{
+                        display: inline-block;
+                        float: $left;
+                        a{
+                            display: block;
+                            width: 30px;
+                            height: 30px;
+                            border-radius: 50%;
+                            background: $linkColor;
+                            line-height: 30px;
+                            text-align: center;
+                            color: #fff;
+                            margin-#{$right}: 10px;
+                            border-radius: 3px;
+                            &:hover{
+                                background: #16478a;
+                            }
+                        }
+                    }
+                }
+            }
+            .tags{
+                ul li{
+                    display: inline-block;
+                    float: $left;
+                    margin-#{$right}: 10px;
                 }
             }
         }
@@ -293,22 +367,27 @@
 }
 
 //---------------------RELATED PRODUCT --------------------
-.related{clear: both; 
+.related{clear: both; position: relative;
     .modtitle{
         text-transform: uppercase; color: #222; font-size: 18px; font-weight: 600;
     }
-   .releate-products .owl2-nav{position: absolute; top: -45px;width: 60px; #{$right}:-5px;
-        div{width: 20px; height: 27px; border: 1px solid #dfdfdf;margin: 0 5px; font-size: 0; float: left; background-color: transparent; @include transition (all 0.3s ease-in-out 0s);position: relative; background-color: #fff;
-            &.owl2-prev{background: url(#{$base-url-theme}icon/next-prev-detail.png) no-repeat; background-position: -41px 0px;
-                &:hover{border-color: $linkColor;background-color: $background; background-position: -4px 0px; opacity: 1;}
-                &.disabled{display: none;}
+    .yt-content-slider{
+        position: static;
+        .owl2-controls{
+            padding: 10px;
+            .owl2-nav{
+                @include owl2-nav-style8(20px,20px,26px);
+
+                > div {
+                    &:after{
+                        display: none;
+                    }
+                }
             }
-            &.owl2-next{background: url(#{$base-url-theme}icon/next-prev-detail.png) no-repeat; background-position: -76px 0px; 
-                &:hover{border-color: $linkColor;background-color: $background; background-position: -112px 0px; opacity: 1;}
-                &.disabled{display: none;}
-            }
-        }
+
+        } 
     }
+
     .owl-dots{display: none;} 
 }
 
@@ -330,7 +409,7 @@
     }
    
     .active .fa{display: block;}
-    .fa{position: absolute;top: 0;#{$left}: 0;z-index: 2;width: 22px;height: 22px; color: white;line-height: 22px;text-align: center;}
+    .fa{position: absolute;top: -2px;#{$left}: 0;z-index: 2;width: 22px;height: 22px; color: white;line-height: 22px;text-align: center;}
 }
 
 .slider-products{
