@@ -32,7 +32,7 @@
     }
 }
 .label-new,
-.label-sale  {
+.label-sale, .label-product-new, .label-product-sale  {
     text-align: center; 
     background-color: $linkColor;
     border-radius: 50%;
@@ -51,11 +51,11 @@
     margin-bottom: 5px;
 }
      
-.label-sale{
+.label-sale, .label-product-sale{
     background-color: $background;
     #{$right}: 20px;
 }
-.label-new{
+.label-new, .label-product-new{
     background-color: #53d542;
     #{$left}: 20px; 
 }
@@ -401,7 +401,7 @@ button{
                         position: absolute;
                         z-index: 99;
                         #{$left}: 10px;
-                        bottom: 35px;
+                        bottom: 15px;
 
                         .btn-button{
                             border: none;
@@ -425,7 +425,7 @@ button{
                             span{
                                 color: #fff;
                                 display: inline-block;
-                                font-size: 12px;
+                                font-size: 11px;
                                 font-weight: 300;
                                 height: auto;
                                 opacity: 0;
