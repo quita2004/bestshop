@@ -496,7 +496,7 @@ ul.breadcrumb {
             text-decoration: none ;
             font-size: 14px;
         }
-
+        &:first-child{padding-#{$left}: 0;}
         &:last-child {
             padding: 5px 0px;
             a{
@@ -523,6 +523,7 @@ ul.breadcrumb {
         color: #222222;
         text-transform: uppercase;
         padding-bottom: 15px;
+        margin-bottom: 30px;
         &:after{
             content: "";
             display: block;
@@ -545,9 +546,7 @@ ul.breadcrumb {
             z-index: 2;
         }
     }
-    .modcontent{
-        padding: 15px 0;
-    }
+    
     .so-quickview{
         display: none;
     }

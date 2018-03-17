@@ -19,7 +19,8 @@
     $string_css     = $scss->compile('@import "home3.scss"');
     $header1_css    = $scss->compile('@import "header/header3.scss"');
     $footer1_css    = $scss->compile('@import "footer/footer3.scss"');
-    
+    $responsive     = $scss->compile('@import "responsive.scss"');
+    file_put_contents('css/responsive.css', $responsive);
     file_put_contents('css/home3.css', $string_css);
     file_put_contents('css/header/header3.css', $header1_css);
     file_put_contents('css/footer/footer3.css', $footer1_css);
@@ -87,8 +88,8 @@
                 <div class="header-top hidden-compact">
                     <div class="container">
                         <div class="row">
-                            <div class="header-top-left col-lg-7 col-md-6 col-sm-6 col-xs-7">
-                                <ul class="socials top-link list-inline">
+                            <div class="header-top-left col-lg-4 col-md-4 col-sm-6 col-xs-4 hidden-xs">
+                                <ul class="socials top-link list-inline ">
                                     <li class="facebook"><a class="_blank" href="https://www.facebook.com/MagenTech" target="_blank"><i class="fa fa-facebook"></i></a>
                                     </li>
                                     <li class="twitter"><a class="_blank" href="https://twitter.com/smartaddons" target="_blank"><i class="fa fa-twitter"></i></a>
@@ -100,12 +101,23 @@
                                     <li class="youtube"><a class="_blank" href="#" target="_blank"><i class="fa fa-youtube-play"></i></a>
                                     </li>
                                 </ul>
+                                
                             </div>
-                            <div class="header-top-right collapsed-block col-lg-5 col-md-6 col-sm-6 col-xs-5">
+                            <div class="header-top-right collapsed-block col-lg-8 col-md-8 col-sm-6 col-xs-12">
+                                <ul class="my-account top-link list-inline hidden-lg hidden-md ">
+                                    <li class="account" id="my_account">
+                                        <a href="#" title="My Account " class="btn-xs dropdown-toggle" data-toggle="dropdown"> <span class="hidden-xs">My Account </span>  <span class="fa fa-caret-down"></span>
+                                        </a>
+                                        <ul class="dropdown-menu ">
+                                            <li><a href="register.html"><i class="fa fa-user"></i> Register</a></li>
+                                            <li><a href="login.html"><i class="fa fa-pencil-square-o"></i> Login</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
                                 <ul class="top-link list-inline lang-curr">
-                                    <li class="welcome"><a href="#">Welcome Customer!</a></li>
-                                    <li><a href="login.html">Sign in</a></li>
-                                    <li><a href="register.html">Create Account</a></li>
+                                    <li class="welcome hidden-xs hidden-sm"><a href="#">Welcome Customer!</a></li>
+                                    <li  class="hidden-xs  hidden-sm"><a href="login.html">Sign in</a></li>
+                                    <li  class="hidden-xs hidden-sm"><a href="register.html">Create Account</a></li>
                                     <li class="currency">
                                         <div class="btn-group currencies-block">
                                             <form action="index.php" method="post" enctype="multipart/form-data" id="currency">
@@ -146,14 +158,14 @@
                     <div class="container">
                         <div class="row">
                             <!-- Logo -->
-                            <div class="navbar-logo col-lg-2 col-md-3 col-sm-12 col-xs-12">
+                            <div class="navbar-logo col-lg-2 col-md-2 col-sm-12 col-xs-12">
                                 <div class="logo"><a href="index.php"><img src="image/catalog/logo.png" title="Your Store" alt="Your Store" /></a></div>
                             </div>
                             <!-- //end Logo -->
                             <!-- Search -->
-                            <div class="middle2 col-lg-7 col-md-6">
+                            <div class="middle2 col-lg-7 col-md-7">
                                 <div class="search-header-w">
-                                    <div class="icon-search hidden-lg hidden-md hidden-sm"><i class="fa fa-search"></i></div>
+                                    
                                     <div id="sosearchpro" class="sosearchpro-wrapper so-search ">
                                         <form method="GET" action="index.php">
                                             <div id="search0" class="search input-group form-group">
@@ -278,7 +290,7 @@
                                 </div>
                                 <!--//cart-->   
                                 <!-- call -->
-                                <div class="telephone hidden-xs hidden-sm hidden-md">
+                                <div class="telephone   hidden-md">
                                     <span>Call Us Free:</span>
                                     <a href="#">888 8888 8888</a>
                                 </div>
@@ -1142,32 +1154,36 @@
                                                     <span class="ltabs-tab-arrow">▼</span>
                                                     <ul class="ltabs-tabs cf list-sub-cat font-title">
                                                         <li class="ltabs-tab tab-sel tab-loaded" data-category-id="72" data-active-content=".items-category-72">
+                                                            <span class="ltabs-tab-label hidden-md hidden-lg"> Electronics</span>
                                                             <div class="category-title">
-                                                                <img src="image/catalog/demo/product/90/6.jpg" alt="">
-                                                                <span class="ltabs-tab-label">Consumer Electronics</span>
+                                                                <img class="hidden-xs" src="image/catalog/demo/product/90/6.jpg" alt="">
+                                                                <span class="ltabs-tab-label"> Electronics</span>
                                                             </div>
                                                         </li>
                                                         <li class="ltabs-tab" data-category-id="51" data-active-content=".items-category-51">
+                                                            <span class="ltabs-tab-label hidden-md hidden-lg">Cellphone</span>
                                                             <div class="category-title">
-                                                                <img src="image/catalog/demo/product/90/7.jpg" alt="">
+                                                                <img class="hidden-xs" src="image/catalog/demo/product/90/7.jpg" alt="">
                                                                 <span class="ltabs-tab-label">Cellphone</span>
                                                             </div>
                                                         </li>
                                                         <li class="ltabs-tab" data-category-id="52" data-active-content=".items-category-52">
+                                                            <span class="ltabs-tab-label hidden-md hidden-lg">Fashion</span>
                                                             <div class="category-title">
-                                                                <img src="image/catalog/demo/product/90/8.jpg" alt="">
-                                                                <span class="ltabs-tab-label">Cellphone</span>
+                                                                <img class="hidden-xs" src="image/catalog/demo/product/90/8.jpg" alt="">
+                                                                <span class="ltabs-tab-label">Fashion</span>
                                                             </div>
                                                         </li>
                                                         <li class="ltabs-tab" data-category-id="53" data-active-content=".items-category-53">
+                                                            <span class="ltabs-tab-label hidden-md hidden-lg">Furnicoms</span>
                                                             <div class="category-title">
-                                                                <img src="image/catalog/demo/product/90/1.jpg" alt="">
-                                                                <span class="ltabs-tab-label">Cellphone</span>
+                                                                <img class="hidden-xs" src="image/catalog/demo/product/90/1.jpg" alt="">
+                                                                <span class="ltabs-tab-label">Furnicoms</span>
                                                             </div>
                                                         </li>
                                                         <li class="view-all">
                                                             <a href="#">
-                                                            <span class="dot">....</span>
+                                                            <span class="dot hidden-xs hidden-sm hidden-md">....</span>
                                                             <span class="text">View All Categories</span>
                                                             </a>
                                                         </li>
@@ -1246,7 +1262,7 @@
                                                                 </div>
                                                             </div>
                                                         </div>
-                                                        <div class="col-product">
+                                                        <div class="col-product hidden-md">
                                                             <div class="product">
                                                                 <div class="left-block">
                                                                     <a href="#"><img src="image/catalog/demo/product/250/5.jpg" alt=""></a>
@@ -1312,7 +1328,7 @@
                         </div>
                         <div class="banners banners3">
                             <div class="row">
-                                <div class="col-md-3">
+                                <div class="col-md-3 col-sm-3">
                                     <div class="banner31">
                                         <a href="#"><img src="image/catalog/banners/home3/banner-31.jpg" alt=""></a>
                                     </div>
@@ -1320,12 +1336,12 @@
                                         <a href="#"><img src="image/catalog/banners/home3/banner-32.jpg" alt=""></a>
                                     </div>
                                 </div>
-                                <div class="col-md-6">
+                                <div class="col-md-6 col-sm-6">
                                     <div class="banner33">
                                         <a href="#"><img src="image/catalog/banners/home3/banner-33.jpg" alt=""></a>
                                     </div>
                                 </div>
-                                <div class="col-md-3">
+                                <div class="col-md-3 col-sm-3">
                                     <div class="banner34">
                                         <a href="#"><img src="image/catalog/banners/home3/banner-34.jpg" alt=""></a>
                                     </div>
@@ -1337,11 +1353,11 @@
                         </div>
                         <div class="box-content2">
                             <div class="row">
-                                <div class="col-md-4">
+                                <div class="col-lg-4 col-md-12">
                                     <div class="deals-product">
                                         <h3 class="title-deals">Deals Of The Day</h3>
                                         <div class="so-extraslider">
-                                            <div class="yt-content-slider extraslider-inner products-list" data-rtl="yes" data-pagination="no" data-autoplay="no" data-delay="4" data-speed="0.6" data-margin="30" data-items_column0="1" data-items_column1="1" data-items_column2="1" data-items_column3="1" data-items_column4="1" data-arrows="yes" data-lazyload="yes" data-loop="yes" data-buttonpage="top">
+                                            <div class="yt-content-slider extraslider-inner products-list" data-rtl="yes" data-pagination="no" data-autoplay="no" data-delay="4" data-speed="0.6" data-margin="30" data-items_column0="1" data-items_column1="2" data-items_column2="1" data-items_column3="1" data-items_column4="1" data-arrows="yes" data-lazyload="yes" data-loop="yes" data-buttonpage="top">
                                                 <div class="item">
                                                     <div class="product-thumb transition">
                                                         <div class="row">
@@ -1463,7 +1479,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-md-8">
+                                <div class="col-lg-8 col-md-12">
                                     <div class="module so-listing-tabs-ltr listingtab-layout3">
                                         <div class="modcontent">
                                             <div id="so_listing_tabs_2" class="so-listing-tabs first-load">
@@ -1834,7 +1850,7 @@
                                 <div id="so_listing_tabs_3" class="so-listing-tabs first-load">
                                     <div class="loadeding"></div>
                                     <div class="ltabs-wrap">
-                                        <div class="ltabs-tabs-container" data-rtl="yes" data-delay="300" data-duration="600" data-effect="starwars" data-ajaxurl="" data-type_source="0" data-lg="5" data-md="4" data-sm="2" data-xs="1" data-margin="30">
+                                        <div class="ltabs-tabs-container" data-rtl="yes" data-delay="300" data-duration="600" data-effect="starwars" data-ajaxurl="" data-type_source="0" data-lg="5" data-md="4" data-sm="2" data-xs="2" data-margin="30">
                                             <!--Begin Tabs-->                            
                                             <div class="ltabs-tabs-wrap">
                                                 <span class='ltabs-tab-selected'></span>
@@ -2185,7 +2201,7 @@
                                 <div class="col-md-4">
                                     <div class="new-arrivals module block-product">
                                         <h3 class="modtitle"><span>New Arrivals</span></h3>
-                                        <div class="yt-content-slider extraslider-inner products-list" data-rtl="yes" data-pagination="yes" data-autoplay="no" data-delay="4" data-speed="0.6" data-margin="0" data-items_column0="2" data-items_column1="2" data-items_column2="1" data-items_column3="1" data-items_column4="1" data-arrows="yes" data-lazyload="yes" data-loop="no" data-buttonpage="top">
+                                        <div class="yt-content-slider extraslider-inner products-list" data-rtl="yes" data-pagination="yes" data-autoplay="no" data-delay="4" data-speed="0.6" data-margin="0" data-items_column0="2" data-items_column1="2" data-items_column2="2" data-items_column3="2" data-items_column4="1" data-arrows="yes" data-lazyload="yes" data-loop="no" data-buttonpage="top">
                                             <div class="item">
                                                 <div class="ltabs-item">
                                                     <div class="item-inner product-layout transition product-grid">
@@ -2504,7 +2520,7 @@
                                 <div class="col-md-4">
                                     <div class="new-arrivals module block-product">
                                         <h3 class="modtitle"><span>On Sale Products</span></h3>
-                                        <div class="yt-content-slider extraslider-inner products-list" data-rtl="yes" data-pagination="yes" data-autoplay="no" data-delay="4" data-speed="0.6" data-margin="0" data-items_column0="2" data-items_column1="2" data-items_column2="1" data-items_column3="1" data-items_column4="1" data-arrows="yes" data-lazyload="yes" data-loop="no" data-buttonpage="top">
+                                        <div class="yt-content-slider extraslider-inner products-list" data-rtl="yes" data-pagination="yes" data-autoplay="no" data-delay="4" data-speed="0.6" data-margin="0" data-items_column0="2" data-items_column1="2" data-items_column2="2" data-items_column3="2" data-items_column4="1" data-arrows="yes" data-lazyload="yes" data-loop="no" data-buttonpage="top">
                                             <div class="item">
                                                 <div class="ltabs-item">
                                                     <div class="item-inner product-layout transition product-grid">
@@ -2821,9 +2837,9 @@
                                     </div>
                                 </div>
                                 <div class="col-md-4">
-                                    <div class="new-arrivals module block-product">
+                                    <div class="most-viewed module block-product">
                                         <h3 class="modtitle"><span>Most Viewed</span></h3>
-                                        <div class="yt-content-slider extraslider-inner products-list" data-rtl="yes" data-pagination="yes" data-autoplay="no" data-delay="4" data-speed="0.6" data-margin="0" data-items_column0="2" data-items_column1="2" data-items_column2="1" data-items_column3="1" data-items_column4="1" data-arrows="yes" data-lazyload="yes" data-loop="no" data-buttonpage="top">
+                                        <div class="yt-content-slider extraslider-inner products-list" data-rtl="yes" data-pagination="yes" data-autoplay="no" data-delay="4" data-speed="0.6" data-margin="0" data-items_column0="2" data-items_column1="2" data-items_column2="2" data-items_column3="2" data-items_column4="1" data-arrows="yes" data-lazyload="yes" data-loop="no" data-buttonpage="top">
                                             <div class="item">
                                                 <div class="ltabs-item">
                                                     <div class="item-inner product-layout transition product-grid">
@@ -3144,7 +3160,7 @@
                         <div class="lastest-blog module">
                             <h3 class="modtitle"><span>Latest From Blogs</span></h3>
                             <div class="list-blog">
-                                <div class="yt-content-slider extraslider-inner products-list" data-rtl="yes" data-pagination="no" data-autoplay="no" data-delay="4" data-speed="0.6" data-margin="30" data-items_column0="4" data-items_column1="4" data-items_column2="2" data-items_column3="1" data-items_column4="1" data-arrows="yes" data-lazyload="yes" data-loop="no" data-buttonpage="top">
+                                <div class="yt-content-slider extraslider-inner products-list" data-rtl="yes" data-pagination="no" data-autoplay="no" data-delay="4" data-speed="0.6" data-margin="30" data-items_column0="4" data-items_column1="4" data-items_column2="2" data-items_column3="2" data-items_column4="1" data-arrows="yes" data-lazyload="yes" data-loop="no" data-buttonpage="top">
                                     <div class="item-inner">
                                         <div class="top-block">
                                             <a href="#">
@@ -3273,7 +3289,7 @@
                 <section class="footer-top ">
                     <div class="container">
                         <div class="row">
-                            <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 col-style">
+                            <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 col-style">
                                 <div class="infos-footer box-footer">
                                     <div class="module">
                                         <h3 class="modtitle">Contact Info</h3>
@@ -3288,7 +3304,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-lg-2 col-md-2 col-sm-4 col-xs-12 col-style">
+                            <div class="col-lg-2 col-md-2 col-sm-6 col-xs-12 col-style">
                                 <div class="box-information box-footer">
                                     <div class="module clearfix">
                                         <h3 class="modtitle">Information</h3>
@@ -3296,16 +3312,16 @@
                                             <ul class="menu">
                                                 <li><a href="#">About Us</a></li>
                                                 <li><a href="#">FAQ</a></li>
-                                                <li><a href="#">Warranty And Services</a></li>
+                                                <li><a href="#">Services</a></li>
                                                 <li><a href="#">Support 24/7 page</a></li>
-                                                <li><a href="#">Product Registration</a></li>
+                                                <li><a href="#">Product </a></li>
                                                 <li><a href="#">Product Support</a></li>
                                             </ul>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-lg-2 col-md-2 col-sm-4 col-xs-12 col-style">
+                            <div class="col-lg-2 col-md-2 col-sm-6 col-xs-12 col-style">
                                 <div class="box-service box-footer">
                                     <div class="module clearfix">
                                         <h3 class="modtitle">Services</h3>
@@ -3322,7 +3338,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 col-style">
+                            <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 col-style">
                                 <div class="module  newsletter box-footer">
                                     <h3 class=" modtitle"><span>Sign Up For Newsletter</span></h3>
                                     <p>Register your email for news and get special offers</p>
@@ -3340,7 +3356,7 @@
                                             </div>
                                         </form>
                                     </div>
-                                    <div class="box-socials hidden-sm hidden-xs">
+                                    <div class="box-socials ">
                                         <h3 class="modtitle">Follow Socials</h3>
                                         <ul class="socials">
                                             <li class="facebook"><a class="_blank" href="https://www.facebook.com/MagenTech" target="_blank"><i class="fa fa-facebook"></i></a>

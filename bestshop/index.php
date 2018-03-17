@@ -17,10 +17,12 @@
     ));
     
     $string_css     = $scss->compile('@import "theme.scss"');
+    $responsive     = $scss->compile('@import "responsive.scss"');
     $header1_css    = $scss->compile('@import "header/header4.scss"');
     $footer1_css    = $scss->compile('@import "footer/footer4.scss"');
     
     file_put_contents('css/theme.css', $string_css);
+    file_put_contents('css/responsive.css', $responsive);
     file_put_contents('css/header/header4.css', $header1_css);
     file_put_contents('css/footer/footer4.css', $footer1_css);
     
@@ -167,9 +169,9 @@
                             </div>
                             <!-- //end Logo -->
                             <!-- Search -->
-                            <div class="middle2 col-lg-7 col-md-6">
+                            <div class="middle2 col-lg-7 col-md-6 col-sm-6 col-xs-12">
                                 <div class="search-header-w">
-                                    <div class="icon-search hidden-lg hidden-md hidden-sm"><i class="fa fa-search"></i></div>
+                                    
                                     <div id="sosearchpro" class="sosearchpro-wrapper so-search ">
                                         <form method="GET" action="index.php">
                                             <div id="search0" class="search input-group form-group">
@@ -199,7 +201,7 @@
                                 </div>
                             </div>
                             <!-- //end Search -->
-                            <div class="middle3 col-lg-3 col-md-3">
+                            <div class="middle3 col-lg-3 col-md-3 col-sm-6 col-xs-12">
                                 <!--cart-->
                                 <div class="shopping_cart">
                                     <div id="cart" class="btn-shopping-cart">
@@ -294,7 +296,7 @@
                                 </div>
                                 <!--//cart-->   
                                 <!-- call -->
-                                <div class="telephone hidden-xs hidden-sm hidden-md">
+                                <div class="telephone  hidden-sm hidden-md">
                                     <span>Call Us Free:</span>
                                     <a href="#">888 8888 8888</a>
                                 </div>
@@ -1153,7 +1155,7 @@
                             <div class="modcontent">
                                 <div class="">
                                     <div class="row">
-                                        <div class="col-lg-4 col-md-4">
+                                        <div class="col-lg-4 col-md-4 col-sm-4">
                                             <div class="bosmarket-text-block clearfix">
                                                 <div class="image banners">
                                                     <div>
@@ -1177,7 +1179,7 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="col-lg-4 col-md-4">
+                                        <div class="col-lg-4 col-md-4 col-sm-4">
                                             <div class="bosmarket-text-block clearfix">
                                                 <div class="image banners">
                                                     <div>
@@ -1201,7 +1203,7 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="col-lg-4 col-md-4">
+                                        <div class="col-lg-4 col-md-4 col-sm-4">
                                             <div class="bosmarket-text-block clearfix">
                                                 <div class="image banners">
                                                     <div>
@@ -1232,7 +1234,7 @@
                         <div class="deals module clearfix">
                             <h3 class="modtitle"><span>Daily Deals</span></h3>
                             <div class="so-extraslider">
-                                <div class="yt-content-slider extraslider-inner products-list" data-rtl="yes" data-pagination="yes" data-autoplay="no" data-delay="4" data-speed="0.6" data-margin="30" data-items_column0="2" data-items_column1="2" data-items_column2="1" data-items_column3="1" data-items_column4="1" data-arrows="no" data-lazyload="yes" data-loop="no" data-buttonpage="top">
+                                <div class="yt-content-slider extraslider-inner products-list" data-rtl="yes" data-pagination="yes" data-autoplay="no" data-delay="4" data-speed="0.6" data-margin="30" data-items_column0="2" data-items_column1="1" data-items_column2="1" data-items_column3="1" data-items_column4="1" data-arrows="no" data-lazyload="yes" data-loop="no" data-buttonpage="top">
                                     <div class="item">
                                         <div class="product-thumb transition">
                                             <div class="row">
@@ -1849,7 +1851,7 @@
                             <div class="modcontent">
                                 <div class="">
                                     <div class="row">
-                                        <div class="col-lg-3 col-md-3">
+                                        <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6">
                                             <div class="bosmarket-text-block clearfix">
                                                 <div class="image banners">
                                                     <div>
@@ -1872,7 +1874,7 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="col-lg-3 col-md-3">
+                                        <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6">
                                             <div class="bosmarket-text-block clearfix">
                                                 <div class="image banners">
                                                     <div>
@@ -1894,7 +1896,7 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="col-lg-3 col-md-3">
+                                        <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6">
                                             <div class="bosmarket-text-block clearfix">
                                                 <div class="image banners">
                                                     <div>
@@ -1916,7 +1918,7 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="col-lg-3 col-md-3">
+                                        <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6">
                                             <div class="bosmarket-text-block clearfix">
                                                 <div class="image banners">
                                                     <div>
@@ -1955,7 +1957,7 @@
                                 <div id="so_listing_tabs_1" class="so-listing-tabs first-load">
                                     <div class="loadeding"></div>
                                     <div class="ltabs-wrap">
-                                        <div class="ltabs-tabs-container" data-rtl="yes" data-delay="300" data-duration="600" data-effect="starwars" data-ajaxurl="" data-type_source="0" data-lg="5" data-md="4" data-sm="2" data-xs="1" data-margin="30">
+                                        <div class="ltabs-tabs-container" data-rtl="yes" data-delay="300" data-duration="600" data-effect="starwars" data-ajaxurl="" data-type_source="0" data-lg="5" data-md="4" data-sm="3" data-xs="2" data-margin="30">
                                             <!--Begin Tabs-->                            
                                             <div class="ltabs-tabs-wrap">
                                                 <span class='ltabs-tab-selected'></span>
@@ -2228,7 +2230,7 @@
                         <div class="module most-view">
                             <h3 class="modtitle"><span>Most Viewed Products</span></h3>
                             <div class="row">
-                                <div class="col-lg-3 col-md-3">
+                                <div class="col-lg-3 col-md-6 col-sm-6">
                                     <div class="product">
                                         <div class="left-block">
                                             <a href="#"><img src="image/catalog/demo/product/90/7.jpg" alt=""></a>
@@ -2262,7 +2264,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-lg-3 col-md-3">
+                                <div class="col-lg-3 col-md-6 col-sm-6">
                                     <div class="product">
                                         <div class="left-block">
                                             <a href="#"><img src="image/catalog/demo/product/90/1.jpg" alt=""></a>
@@ -2295,7 +2297,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-lg-3 col-md-3">
+                                <div class="col-lg-3 col-md-6 col-sm-6">
                                     <div class="product">
                                         <div class="left-block">
                                             <a href="#"><img src="image/catalog/demo/product/90/3.jpg" alt=""></a>
@@ -2329,7 +2331,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-lg-3 col-md-3">
+                                <div class="col-lg-3 col-md-6 col-sm-6">
                                     <div class="product">
                                         <div class="left-block">
                                             <a href="#"><img src="image/catalog/demo/product/90/5.jpg" alt=""></a>
@@ -2402,7 +2404,7 @@
                             <h3 class="modtitle"><span>Latest From Blogs</span></h3>
                             <div class="list-blog">
                                 <div class="row">
-                                    <div class="col-lg-3 div-md-3">
+                                    <div class="col-lg-3 col-md-6 col-sm-6">
                                         <div class="item-inner">
                                             <div class="top-block">
                                                 <a href="#">
@@ -2423,7 +2425,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col-lg-3 div-md-3">
+                                    <div class="col-lg-3 col-md-6 col-sm-6">
                                         <div class="item-inner">
                                             <div class="top-block">
                                                 <a href="#">
@@ -2444,7 +2446,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col-lg-3 div-md-3">
+                                    <div class="col-lg-3 col-md-6 col-sm-6">
                                         <div class="item-inner">
                                             <div class="top-block">
                                                 <a href="#">
@@ -2465,7 +2467,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col-lg-3 div-md-3">
+                                    <div class="col-lg-3 col-md-6 col-sm-6">
                                         <div class="item-inner">
                                             <div class="top-block">
                                                 <a href="#">
@@ -2501,7 +2503,7 @@
                 <div class="container">
                     <div class="row">
                         <div class="contnet-footer-top">
-                            <div class="col-lg-6 col-md-6 col-sm-4 col-xs-12 hidden-sm hidden-xs">
+                            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 socials-footer">
                                 <h3 class="title-footer-top">Follow Socials</h3>
                                 <ul class="socials">
                                     <li class="facebook"><a class="_blank" href="https://www.facebook.com/MagenTech" target="_blank"><i class="fa fa-facebook"></i></a>
@@ -2516,12 +2518,11 @@
                                     </li>
                                     <li class="pinterest"><a class="_blank" href="https://www.pinterest.com/smartaddons/" target="_blank"><i class="fa fa-youtube"></i></a>
                                     </li>
-                                    <li class="pinterest"><a class="_blank" href="https://www.pinterest.com/smartaddons/" target="_blank"><i class="fa fa-linkedin"></i></a>
-                                    </li>
+                                    
                                 </ul>
                             </div>
-                            <div class="col-lg-6 col-md-6 col-sm-9 col-xs-12 hidden-xs">
-                                <h3 class="title-footer-top">Sign Up For Newsletter</h3>
+                            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12  form-newsletter">
+                                <h3 class="title-footer-top title-footer-bot">Sign Up For Newsletter</h3>
                                 <div class="block_content">
                                     <form method="post" id="signup" name="signup" class="form-group form-inline signup send-mail">
                                         <div class="form-group">
@@ -2545,7 +2546,7 @@
             <section class="footer-middle ">
                 <div class="container">
                     <div class="row">
-                        <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 col-style">
+                        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 col-style">
                             <div class="infos-footer box-footer">
                                 <div class="module">
                                     <h3 class="modtitle">Contact Info</h3>
@@ -2560,7 +2561,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-lg-2 col-md-2 col-sm-4 col-xs-12 col-style">
+                        <div class="col-lg-2 col-md-2 col-sm-6 col-xs-12 col-style">
                             <div class="box-information box-footer">
                                 <div class="module clearfix">
                                     <h3 class="modtitle">Information</h3>
@@ -2568,16 +2569,16 @@
                                         <ul class="menu">
                                             <li><a href="#">About Us</a></li>
                                             <li><a href="#">FAQ</a></li>
-                                            <li><a href="#">Warranty And Services</a></li>
+                                            <li><a href="#">Warranty </a></li>
                                             <li><a href="#">Support 24/7 page</a></li>
-                                            <li><a href="#">Product Registration</a></li>
+                                            <li><a href="#">Product </a></li>
                                             <li><a href="#">Product Support</a></li>
                                         </ul>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-lg-2 col-md-2 col-sm-4 col-xs-12 col-style">
+                        <div class="col-lg-2 col-md-2 col-sm-6 col-xs-12 col-style">
                             <div class="box-service box-footer">
                                 <div class="module clearfix">
                                     <h3 class="modtitle">Services</h3>
@@ -2594,7 +2595,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 col-style">
+                        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 col-style">
                             <div class="module  so-popular-tag box-footer">
                                 <h3 class=" modtitle"><span>Popular Tags</span></h3>
                                 <div class="modcontent">
@@ -2617,7 +2618,7 @@
                 <div class="container">
                     <div class="row">
                         <div class="content-footer-bottom">
-                            <div class="col-lg-6 col-md-5 col-sm-12 col-xs-12 payment-w">
+                            <div class="col-lg-6 col-md-5 col-sm-12 col-xs-12 payment-w hidden-sm">
                                 <img src="image/catalog/demo/payment/payment.png" alt="imgpayment">
                             </div>
                             <div class="col-lg-6 col-md-7 col-sm-12 col-xs-12 copyright-w pull-right">

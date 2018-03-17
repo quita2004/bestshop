@@ -13,13 +13,22 @@
 		}
 	}
 }
-@media (min-width: 1200px) and (max-width: 1649px){
-	#content .so-groups-sticky{
-		width: 40px;
-	}
+@media (min-width: 1200px) and (max-width: 1440px){
+	.typefooter-2 .footer-top .contnet-footer-top h3.title-footer-bot{display: none;}
 	.products-list .product-grid .product-item-container .left-block .button-group{
 		bottom: 5px;
 	}
+
+	.typefooter-4 .footer-top .contnet-footer-top h3.title-footer-bot{display: none;}
+
+	header.typeheader-3{
+		.container-megamenu.horizontal ul.megamenu > li{margin-#{$right}: 20px;}
+		.container-megamenu.horizontal ul.megamenu > li.item-special a{
+			padding-#{$left}: 20px;
+			&:before{content: "";}
+		}
+	} 
+	
 }
 
 

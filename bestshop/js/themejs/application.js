@@ -496,11 +496,11 @@ $(document).ready(function ($) {
 /* ---------------------------------------------------
 	Other Query
 -------------------------------------------------- */
-$(document).ready(function($) {
-	$('.date').datetimepicker({
-		pickTime: false
-	});
-});
+// $(document).ready(function($) {
+// 	$('.date').datetimepicker({
+// 		pickTime: false
+// 	});
+// });
 
 /* ---------------------------------------------------
 	Page About Us
@@ -525,7 +525,7 @@ $(document).ready(function(){
 });
 
 $(function() {
-	var austDay = new Date(2018, 3 - 1, 28);
+	var austDay = new Date(2019, 3 - 1, 28);
 	$('.defaultCountdown-30').countdown(austDay, function(event) {
 		var $this = $(this).html(event.strftime(''
 		   + '<div class="time-item time-day"><div class="num-time">%D</div><div class="name-time">Day </div></div>'

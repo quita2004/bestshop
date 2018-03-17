@@ -973,253 +973,475 @@
 	<!-- Main Container  -->
 	<div class="main-container container">
 		<ul class="breadcrumb">
-			<li><a href="#"><i class="fa fa-home"></i></a></li>
+			<li><a href="#">Home</a></li>
 			<li><a href="#">Blog</a></li>
 			<li><a href="#">Kire tuma demonstraverunt lector</a></li>
 		</ul>
 		
 		<div class="row">
 			<!--Left Part Start -->
-            <aside class="col-md-3 col-sm-4 col-xs-12 content-aside left_column " id="column-left">
-                <div class="module blog-category titleLine">
-                    <h3 class="modtitle">Blog Category</h3>
-                    <div class="modcontent">
-                        <ul class="list-group ">
-                            <li class="list-group-item"> <a href="blog-page.html"class="group-item active">Our Blog</a></li>
-                            <li class="list-group-item"><a href="blog-page.html" class="group-item">Demo Category 2</a></li>
-                            <li class="list-group-item"><a href="blog-page.html" class="group-item">Demo Category 3</a></li>
-                            <li class="list-group-item"><a href="blog-page.html" class="group-item">Demo Category 4</a></li>
-                            <li class="list-group-item"><a href="blog-page.html" class="group-item">Demo Category 5</a></li>
-                        </ul>
-                        
-                    </div>
+            <aside class="col-sm-4 col-md-3 content-aside" id="column-left">
+                <div class="search">
+                    <input type="text" class="input-group" placeholder="Search">
+                    <button class="btn btn-group"><i class="fa fa-search"></i></button>
                 </div>
-
-                <div class="module product-simple">
-                    <h3 class="modtitle">
+                <div class="author  ">
+                    <h3 class="modtitle2">
                         <span>Latest products</span>
                     </h3>
+                    <div class="content-author">
+                        <div class="img-author">
+                            <a href="#"><img src="image/catalog/blog/author-blog.jpg" alt="Author"></a>
+                        </div>
+                        <div class="des-author">
+                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, ...</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="module category-style">
+                    <h3 class="modtitle">Categories</h3>
                     <div class="modcontent">
-                        <div class="extraslider" >
+                        <div class="box-category">
+                            <ul id="cat_accordion" class="list-group">
+                                <li class="hadchild">
+                                    <a href="category.html" class="cutom-parent">Smartphone & Tablets</a>    <span class="button-view  fa fa-caret-right"></span>
+                                    <ul style="display: block;">
+                                        <li><a href="category.html">Men's Watches</a></li>
+                                        <li><a href="category.html">Women's Watches</a></li>
+                                        <li><a href="category.html">Kids' Watches</a></li>
+                                        <li><a href="category.html">Accessories</a></li>
+                                    </ul>
+                                </li>
+                                <li class="hadchild">
+                                    <a class="cutom-parent" href="category.html">Electronics</a>    <span class="button-view  fa fa-caret-right"></span>
+                                    <ul style="display: none;">
+                                        <li><a href="category.html">Cycling</a></li>
+                                        <li><a href="category.html">Running</a></li>
+                                        <li><a href="category.html">Swimming</a></li>
+                                        <li><a href="category.html">Football</a></li>
+                                        <li><a href="category.html">Golf</a></li>
+                                        <li><a href="category.html">Windsurfing</a></li>
+                                    </ul>
+                                </li>
+                                <li class="hadchild">
+                                    <a href="category.html" class="cutom-parent">Shoes</a>    <span class="button-view  fa fa-caret-right"></span>
+                                    <ul style="display: none;">
+                                        <li><a href="category.html">Sub Categories</a></li>
+                                        <li><a href="category.html">Sub Categories</a></li>
+                                        <li><a href="category.html">Sub Categories</a></li>
+                                        <li><a href="category.html">Sub Categories</a></li>
+                                        <li><a href="category.html">Sub Categories</a></li>
+                                    </ul>
+                                </li>
+                                <li class="hadchild">
+                                    <a href="category.html" class="cutom-parent">Watches</a>   <span class="button-view  fa fa-caret-right"></span>
+                                    <ul style="display: none;">
+                                        <li><a href="category.html">Men's Watches</a></li>
+                                        <li><a href="category.html">Women's Watches</a></li>
+                                        <li><a href="category.html">Kids' Watches</a></li>
+                                        <li><a href="category.html">Accessories</a></li>
+                                    </ul>
+                                </li>
+                                <li class="hadchild">
+                                    <a href="category.html" class="cutom-parent">Jewellery</a>     <span class="button-view  fa fa-caret-right"></span>
+                                    <ul style="display: none;">
+                                        <li><a href="category.html">Sub Categories</a></li>
+                                        <li><a href="category.html">Sub Categories</a></li>
+                                        <li><a href="category.html">Sub Categories</a></li>
+                                        <li><a href="category.html">Sub Categories</a></li>
+                                        <li><a href="category.html">Sub Categories</a></li>
+                                    </ul>
+                                </li>
+                                <li class=""><a href="category.html" class="cutom-parent">Health &amp; Beauty</a>  <span class="dcjq-icon"></span></li>
+                                <li class=""><a href="category.html" class="cutom-parent">Kids &amp; Babies</a>    <span class="dcjq-icon"></span></li>
+                                <li class=""><a href="category.html" class="cutom-parent">Sports</a>  <span class="dcjq-icon"></span></li>
+                                <li class=""><a href="category.html" class="cutom-parent">Home &amp; Garden</a><span class="dcjq-icon"></span></li>
+                                <li class=""><a href="category.html" class="cutom-parent">Wines &amp; Spirits</a>  <span class="dcjq-icon"></span></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="  lastest-blog">
+                    <h3 class="modtitle2">
+                        <span>Latest Blog</span>
+                    </h3>
+                    <div class="modcontent">
+                        <div  class="so-extraslider list-blog" >
                             <!-- Begin extraslider-inner -->
-                            <div class="yt-content-slider extraslider-inner">
-                                <div class="item ">
-                                    <div class="product-layout item-inner style1 ">
-                                        <div class="item-image">
-                                            <div class="item-img-info">
-                                                <a href="#" target="_self" title="Mandouille short ">
-                                                    <img src="image/catalog/demo/product/80/8.jpg" alt="Mandouille short">
-                                                    </a>
-                                            </div>
+                            <div class="yt-content-slider extraslider-inner products-list" data-rtl="yes" data-pagination="yes" data-autoplay="no" data-delay="4" data-speed="0.6" data-margin="30" data-items_column0="1" data-items_column1="1" data-items_column2="1" data-items_column3="1" data-items_column4="1" data-arrows="no" data-lazyload="yes" data-loop="no" data-buttonpage="top">
+                                <div class="item-inner">
+                                    <div class="top-block">
+                                        <a href="#">
+                                            <img class="content" src="image/catalog/blog/home1/1.jpg" alt="">
                                             
-                                        </div>
-                                        <div class="item-info">
-                                            <div class="item-title">
-                                                <a href="#" target="_self" title="Mandouille short">Mandouille short </a>
-                                            </div>
-                                            <div class="rating">
-                                                <span class="fa fa-stack"><i class="fa fa-star fa-stack-2x"></i></span>
-                                                <span class="fa fa-stack"><i class="fa fa-star fa-stack-2x"></i></span>
-                                                <span class="fa fa-stack"><i class="fa fa-star fa-stack-2x"></i></span>
-                                                <span class="fa fa-stack"><i class="fa fa-star fa-stack-2x"></i></span>
-                                                <span class="fa fa-stack"><i class="fa fa-star fa-stack-2x"></i></span>
-                                            </div>
-                                            <div class="content_price price">
-                                                <span class="price-new product-price">$55.00 </span>&nbsp;&nbsp;
-
-                                                <span class="price-old">$76.00 </span>&nbsp;
-
-                                            </div>
-                                        </div>
-                                        <!-- End item-info -->
-                                        <!-- End item-wrap-inner -->
+                                        </a>
+                                        
                                     </div>
-                                    <!-- End item-wrap -->
-                                    <div class="product-layout item-inner style1 ">
-                                        <div class="item-image">
-                                            <div class="item-img-info">
-                                                <a href="#" target="_self" title="Xancetta bresao ">
-                                                        <img src="image/catalog/demo/product/80/7.jpg" alt="Xancetta bresao">
-                                                        </a>
-                                            </div>
+                                    <div class="bottom-block">
+                                        <h4><a href="blog-detail.html">Winner Of Primetime Emmy Award And Outstanding Comedy Series, It's A Must Watch.</a></h4>
+                                        <div class="entry-meta">
+                                            <div class="entry-date"><i class="fa fa-calendar"></i> Feb 28, 2017</div>
+                                            <div class="entry-comment"><i class="fa fa-comments"></i> 0 comments</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="item-inner">
+                                    <div class="top-block">
+                                        <a href="#">
+                                            <img class="content" src="image/catalog/blog/home1/2.jpg" alt="">
                                             
-                                        </div>
-                                        <div class="item-info">
-                                            <div class="item-title">
-                                                <a href="#" target="_self" title="Xancetta bresao">
-                                                            Xancetta bresao 
-                                                        </a>
-                                            </div>
-                                            <div class="rating">
-                                                <span class="fa fa-stack"><i class="fa fa-star fa-stack-2x"></i></span>
-                                                <span class="fa fa-stack"><i class="fa fa-star fa-stack-2x"></i></span>
-                                                <span class="fa fa-stack"><i class="fa fa-star fa-stack-2x"></i></span>
-                                                <span class="fa fa-stack"><i class="fa fa-star fa-stack-2x"></i></span>
-                                                <span class="fa fa-stack"><i class="fa fa-star fa-stack-2x"></i></span>
-                                            </div>
-                                            <div class="content_price price">
-                                                <span class="price-new product-price">$80.00 </span>&nbsp;&nbsp;
-
-                                                <span class="price-old">$89.00 </span>&nbsp;
-
-
-
-                                            </div>
-                                        </div>
-                                        <!-- End item-info -->
-                                        <!-- End item-wrap-inner -->
+                                        </a>
+                                        
                                     </div>
-                                    <!-- End item-wrap -->
-                                    <div class="product-layout item-inner style1 ">
-                                        <div class="item-image">
-                                            <div class="item-img-info">
-                                                <a href="#" target="_self" title="Sausage cowbee ">
-                                                            <img src="image/catalog/demo/product/80/6.jpg" alt="Sausage cowbee">
-                                                            </a>
-                                            </div>
-                                           
+                                    <div class="bottom-block">
+                                        <h4><a href="blog-detail.html">Winner Of Primetime Emmy Award And Outstanding Comedy Series, It's A Must Watch.</a></h4>
+                                        <div class="entry-meta">
+                                            <div class="entry-date"><i class="fa fa-calendar"></i> Feb 30, 2017</div>
+                                            <div class="entry-comment"><i class="fa fa-comments"></i> 10 comments</div>
                                         </div>
-                                        <div class="item-info">
-                                            <div class="item-title">
-                                                <a href="#" target="_self" title="Sausage cowbee">
-                                                            Sausage cowbee 
-                                                        </a>
-                                            </div>
-                                            <div class="rating">
-                                                <span class="fa fa-stack"><i class="fa fa-star fa-stack-2x"></i></span>
-                                                <span class="fa fa-stack"><i class="fa fa-star fa-stack-2x"></i></span>
-                                                <span class="fa fa-stack"><i class="fa fa-star fa-stack-2x"></i></span>
-                                                <span class="fa fa-stack"><i class="fa fa-star fa-stack-2x"></i></span>
-                                                <span class="fa fa-stack"><i class="fa fa-star fa-stack-2x"></i></span>
-                                            </div>
-                                           
-                                            <div class="content_price price">
-                                                <span class="price product-price">
-                                                                $66.00 
-                                                            </span>
-                                            </div>
-                                        </div>
-                                        <!-- End item-info -->
-                                        <!-- End item-wrap-inner -->
                                     </div>
-                                    <!-- End item-wrap -->
-                                    <div class="product-layout item-inner style1 ">
-                                        <div class="item-image">
-                                            <div class="item-img-info">
-                                                <a href="#" target="_self" title="Chicken swinesha ">
-                                                <img src="image/catalog/demo/product/80/5.jpg" alt="Chicken swinesha">
-                                                </a>
-                                            </div>
-                                           
-                                        </div>
-                                        <div class="item-info">
-                                            <div class="item-title">
-                                                <a href="#" target="_self" title="Chicken swinesha">
-                                                            Chicken swinesha 
-                                                        </a>
-                                            </div>
-                                             <div class="rating">
-                                                <span class="fa fa-stack"><i class="fa fa-star fa-stack-2x"></i></span>
-                                                <span class="fa fa-stack"><i class="fa fa-star fa-stack-2x"></i></span>
-                                                <span class="fa fa-stack"><i class="fa fa-star fa-stack-2x"></i></span>
-                                                <span class="fa fa-stack"><i class="fa fa-star fa-stack-2x"></i></span>
-                                                <span class="fa fa-stack"><i class="fa fa-star fa-stack-2x"></i></span>
-                                            </div>
-                                            <div class="content_price price">
-                                                <span class="price-new product-price">$45.00 </span>&nbsp;&nbsp;
-
-                                                <span class="price-old">$56.00 </span>&nbsp;
-
-
-
-                                            </div>
-                                        </div>
-                                        <!-- End item-info -->
-                                        <!-- End item-wrap-inner -->
-                                    </div>
-                                    <!-- End item-wrap -->
                                 </div>
                             </div>
                             <!--End extraslider-inner -->
                         </div>
                     </div>
                 </div>
-                
+                <div class="achive">
+                    <h3 class="modtitle2">
+                        <span>Archive</span>
+                    </h3>
+                    <ul>
+                        <li><a href="#"><i class="fa fa-calendar"></i> September 2015 (30)</a></li>
+                        <li><a href="#"><i class="fa fa-calendar"></i> August 2015 (20)</a></li>
+                        <li><a href="#"><i class="fa fa-calendar"></i> October 2014 (25)</a></li>
+                        <li><a href="#"><i class="fa fa-calendar"></i> January 2014 ( 45)</a></li>
+                        <li><a href="#"><i class="fa fa-calendar"></i> December 2013 (16)</a></li>
+                    </ul>
+                </div>
                 <div class="module banner-left hidden-xs ">
                     <div class="banner-sidebar banners">
-                      <div>
-                        <a title="Banner Image" href="#"> 
-                          <img src="image/catalog/banners/banner-sidebar.jpg" alt="Banner Image"> 
-                        </a>
-                      </div>
+                        <div>
+                            <a title="Banner Image" href="#"> 
+                                <img src="image/catalog/banners/banner-sidebar.jpg" alt="Banner Image"> 
+                            </a>
+                        </div>
                     </div>
-                </div>  
+                </div>
+                
             </aside>
             <!--Left Part End -->
 			
 			<!--Middle Part Start-->
 			<div id="content" class="col-md-9 col-sm-8">
 				<div class="article-info">
-					<div class="blog-header">
-						<h3>Kire tuma demonstraverunt lector</h3>
-					</div>
-					<div class="article-sub-title">
-						<span class="article-author">Post by: <a href="#"> Admin</a></span>
-						<span class="article-date">Created Date: Tue, Feb 16, 2016</span>
-						<span class="article-comment">0  Comments</span>
-					</div>
-					<div class="form-group">
-						<a href="image/catalog/blog/4.jpg" class="image-popup"><img src="image/catalog/blog/4.jpg" alt="Kire tuma demonstraverunt lector"></a>
-					</div>
+                    <div class="blog-category">
+                        <div class="block-item-inner">
+                            <div class="blog-item-img">
+                                <a href="#"><img src="image/catalog/blog/b1.jpg" alt=""></a>
+                            </div>
+                            <div class="blog-item-content">
+                                <a href="#"><h4>Lorem Khaled Ipsum is a Major Key to Success</h4></a>
+
+                                <div class="blog-meta">
+                                    <div class="author">
+                                        <span class="author"><i class="fa fa-user"></i> Post by Wash upito</span>
+                                        <span class="date"><i class="fa fa-calendar"></i><a href="#"> Feb, 28 2018</a></span>
+                                        <span class="comment"><i class="fa fa-comment-o"></i><a href="#"> 1 Comment</a></span>
+                                        <span class="tag"><i class="fa fa-comment-o"></i>
+                                            <a href="#">Fashion, </a>
+                                            <a href="#">New, </a>
+                                            <a href="#">Furniture, </a>
+                                            <a href="#">Elactronic</a>
+                                        </span>
+                                    </div>
+                                </div>
+                                <p class="article-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tincidunt, erat in malesuada aliquam, est erat faucibus purus, eget viverra nulla sem vitae neque. Quisque id sodales libero. In nec enim nisi, in ultricies quam. Sed lacinia feugiat velit, cursus molestie lectus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tincidunt, erat in malesuada aliquam, est erat faucibus purus, eget viverra nulla sem vitae neque. Quisque id sodales libero. In nec enim nisi, in ultricies quam. Sed lacinia feugiat velit, cursus molestie lectus.</p>
+                            </div>
+
+                            <div class="look-see">
+                                <h4>Here, we bring you a look-see:</h4>
+                                <p>1. How could you possibly go wrong with black sneakers? Especially for airport dressing, when paps await (because you are Alia Bhatt, of course), so you need to look stylish for the million pictures that will flood the internet. Comfort+Style! What more can a girl ask for?</p>
+                                <p>2. Ripped denims and patterned sneakers. J’adore!</p>
+                            </div>
+                            <div class="tags-share">
+                                <div class="tags">
+                                    <span>Tags: </span>
+                                    <a href="#">dress, </a>
+                                    <a href="#">tops, </a>
+                                    <a href="#">women, </a>
+                                    <a href="#">bags, </a>
+                                    <a href="#">fashion</a>
+                                </div>
+                                <div class="share">
+                                    <span>Share: </span>
+                                    <div class="icon-share">
+
+                                        <ul class="socials">
+                                            <li class="facebook"><a class="_blank" href="https://www.facebook.com/MagenTech" target="_blank"><i class="fa fa-facebook"></i></a>
+                                            </li>
+                                            <li class="twitter"><a class="_blank" href="https://twitter.com/smartaddons" target="_blank"><i class="fa fa-twitter"></i></a>
+                                            </li>
+                                            <li class="google_plus"><a class="_blank" href="https://plus.google.com/u/0/+Smartaddons/posts" target="_blank"><i class="fa fa-google-plus"></i></a>
+                                            </li>
+                                            <li class="pinterest"><a class="_blank" href="https://www.pinterest.com/smartaddons/" target="_blank"><i class="fa fa-skype"></i></a>
+                                            </li>
+                                            <li class="pinterest"><a class="_blank" href="https://www.pinterest.com/smartaddons/" target="_blank"><i class="fa fa-pinterest"></i></a>
+                                            </li>
+
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="author-details">
+                                <div id="authorDetails" class="clearfix">
+                                    <div class="authorDetail">
+                                        <div class="avatar">
+                                            <img alt="Avata" src="image/catalog/blog/avata-1.jpg" class="avatar pull-left" height="100" width="100">                   
+                                        </div>
+                                        <div class="infomation">
+                                            <h4 class="name-author">John doe <span>Administrator, Web Designer</span></h4>
+                                            <p>Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non num
+                                            quam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="  related-news module">
+                                <h3 class="modtitle2">
+                                    <span>RELATED NEWS</span>
+                                </h3>
+                                <div class="modcontent">
+                                    <div  class="so-extraslider list-blog" >
+                                        <!-- Begin extraslider-inner -->
+                                        <div class="yt-content-slider extraslider-inner products-list" data-rtl="yes" data-pagination="yes" data-autoplay="no" data-delay="4" data-speed="0.6" data-margin="30" data-items_column0="4" data-items_column1="3" data-items_column2="1" data-items_column3="1" data-items_column4="1" data-arrows="no" data-lazyload="yes" data-loop="no" data-buttonpage="top">
+                                            <div class="item-inner">
+                                                <div class="top-block">
+                                                    <a href="#">
+                                                        <img class="content" src="image/catalog/blog/b5.jpg" alt="">
+                                                    </a>
+
+                                                </div>
+                                                <div class="bottom-block">
+                                                    <h4><a href="blog-detail.html">Lorem Khaled Ipsum is a Major </a></h4>
+                                                    <div class="entry-meta">
+                                                        <div class="entry-date"><i class="fa fa-calendar"></i> Feb 20, 2017</div>
+                                                        <div class="entry-comment"><i class="fa fa-comments"></i> 1 comments</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="item-inner">
+                                                <div class="top-block">
+                                                    <a href="#">
+                                                        <img class="content" src="image/catalog/blog/b6.jpg" alt="">
+
+                                                    </a>
+
+                                                </div>
+                                                <div class="bottom-block">
+                                                    <h4><a href="blog-detail.html">Walk With Me Through The</a></h4>
+                                                    <div class="entry-meta">
+                                                        <div class="entry-date"><i class="fa fa-calendar"></i> Feb 25, 2017</div>
+                                                        <div class="entry-comment"><i class="fa fa-comments"></i> 10 comments</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="item-inner">
+                                                <div class="top-block">
+                                                    <a href="#">
+                                                        <img class="content" src="image/catalog/blog/b7.jpg" alt="">
+
+                                                    </a>
+
+                                                </div>
+                                                <div class="bottom-block">
+                                                    <h4><a href="blog-detail.html">Walk With Me Through </a></h4>
+                                                    <div class="entry-meta">
+                                                        <div class="entry-date"><i class="fa fa-calendar"></i> Mar 1, 2017</div>
+                                                        <div class="entry-comment"><i class="fa fa-comments"></i> 0 comments</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="item-inner">
+                                                <div class="top-block">
+                                                    <a href="#">
+                                                        <img class="content" src="image/catalog/blog/b13.jpg" alt="">
+
+                                                    </a>
+
+                                                </div>
+                                                <div class="bottom-block">
+                                                    <h4><a href="blog-detail.html">Take This Journey With Me</a></h4>
+                                                    <div class="entry-meta">
+                                                        <div class="entry-date"><i class="fa fa-calendar"></i> Mar 04, 2017</div>
+                                                        <div class="entry-comment"><i class="fa fa-comments"></i> 5 comments</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="item-inner">
+                                                <div class="top-block">
+                                                    <a href="#">
+                                                        <img class="content" src="image/catalog/blog/b9.jpg" alt="">
+
+                                                    </a>
+
+                                                </div>
+                                                <div class="bottom-block">
+                                                    <h4><a href="blog-detail.html">Walk With Me Through </a></h4>
+                                                    <div class="entry-meta">
+                                                        <div class="entry-date"><i class="fa fa-calendar"></i> Mar 10, 2017</div>
+                                                        <div class="entry-comment"><i class="fa fa-comments"></i> 3 comments</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="item-inner">
+                                                <div class="top-block">
+                                                    <a href="#">
+                                                        <img class="content" src="image/catalog/blog/b10.jpg" alt="">
+
+                                                    </a>
+
+                                                </div>
+                                                <div class="bottom-block">
+                                                    <h4><a href="blog-detail.html">Walk With Me Through</a></h4>
+                                                    <div class="entry-meta">
+                                                        <div class="entry-date"><i class="fa fa-calendar"></i> Mar 12, 2017</div>
+                                                        <div class="entry-comment"><i class="fa fa-comments"></i> 15 comments</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="item-inner">
+                                                <div class="top-block">
+                                                    <a href="#">
+                                                        <img class="content" src="image/catalog/blog/b11.jpg" alt="">
+
+                                                    </a>
+
+                                                </div>
+                                                <div class="bottom-block">
+                                                    <h4><a href="blog-detail.html">Walk With Me Through</a></h4>
+                                                    <div class="entry-meta">
+                                                        <div class="entry-date"><i class="fa fa-calendar"></i> Mar 16, 2017</div>
+                                                        <div class="entry-comment"><i class="fa fa-comments"></i> 6 comments</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="item-inner">
+                                                <div class="top-block">
+                                                    <a href="#">
+                                                        <img class="content" src="image/catalog/blog/b12.jpg" alt="">
+
+                                                    </a>
+
+                                                </div>
+                                                <div class="bottom-block">
+                                                    <h4><a href="blog-detail.html">Walk With Me Through</a></h4>
+                                                    <div class="entry-meta">
+                                                        <div class="entry-date"><i class="fa fa-calendar"></i> Mar 20, 2017</div>
+                                                        <div class="entry-comment"><i class="fa fa-comments"></i> 7 comments</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!--End extraslider-inner -->
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="comment module">
+                                <h3 class="modtitle2">
+                                    <span>comments ( 03 )</span>
+                                </h3>
+                                <div class="content-comment">
+                                    <div class="comment-details">
+                                        <div id="commentDetails" class="clearfix">
+                                            <div class="commentDetail">
+                                                <div class="avatar">
+                                                    <img alt="Avata" src="image/catalog/blog/avata-2.jpg" class="avatar pull-left" height="100" width="100">                 
+                                                </div>
+                                                <div class="infomation">
+                                                    <h4 class="name-comment">John doe</h4>
+                                                    <div class="top-right">
+                                                        <span class="comment-date">Posted on Mar 17, 2015  at 6:57am</span>
+                                                        <a href="#">Repost</a>
+                                                        <a href="#" class="reply">Reply <i class="fa fa-reply"></i></a>
+                                                    </div>
+                                                    
+                                                    <p>Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non num
+                                                    quam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="comment-details comment-reply">
+                                        <div id="commentDetails" class="clearfix">
+                                            <div class="commentDetail">
+                                                <div class="avatar">
+                                                    <img alt="Avata" src="image/catalog/blog/avata-3.jpg" class="avatar pull-left" height="100" width="100">                 
+                                                </div>
+                                                <div class="infomation">
+                                                    <h4 class="name-comment">John doe</h4>
+                                                    <div class="top-right">
+                                                        <span class="comment-date">Posted on Mar 17, 2015  at 7:00am</span>
+                                                        <a href="#">Repost</a>
+                                                        <a href="#" class="reply">Reply <i class="fa fa-reply"></i></a>
+                                                    </div>
+                                                    
+                                                    <p>Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non num
+                                                    quam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="comment-details">
+                                        <div id="commentDetails" class="clearfix">
+                                            <div class="commentDetail">
+                                                <div class="avatar">
+                                                    <img alt="Avata" src="image/catalog/blog/avata-1.jpg" class="avatar pull-left" height="100" width="100">                 
+                                                </div>
+                                                <div class="infomation">
+                                                    <h4 class="name-comment">John doe</h4>
+                                                    <div class="top-right">
+                                                        <span class="comment-date">Posted on Mar 17, 2015  at 7:20</span>
+                                                        <a href="#">Repost</a>
+                                                        <a href="#" class="reply">Reply <i class="fa fa-reply"></i></a>
+                                                    </div>
+                                                    
+                                                    <p>Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non num
+                                                    quam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 					
-					<div class="article-description">
-						<p>Morbi tempus, non ullamcorper euismod, erat odio suscipit purus, nec ornare lacus turpis ac purus. Mauris cursus in mi vel dignissim. Morbi mollis elit ipsum, a feugiat lectus gravida non. Aenean molestie justo sed aliquam euismod. Maecenas laoreet bibendum laoreet. Morbi tempor massa sit amet purus lobortis, non porta tellus dignissim. </p>
-						<p>Proin dictum justo a nisl pellentesque egestas.Nulla commodo euismod nisi ac bibendum. Mauris in pellentesque tellus, in cursus magna. Sed volutpat dui bibendum mi molestie, at volutpat nunc dictum. Fusce sagittis massa id eros scelerisque, eget accumsan magna lacinia. Nullam posuere neque at neque dictum interdum</p>
-						<p> Mauris cursus in mi vel dignissim. Morbi mollis elit ipsum, a feugiat lectus gravida non. Aenean molestie justo sed aliquam euismod. Maecenas laoreet bibendum laoreet. Morbi tempor massa sit amet purus lobortis, non porta tellus dignissim. Proin dictum justo a nisl pellentesque egestas.Nulla commodo euismod nisi ac bibendum. Mauris in pellentesque tellus, in cursus magna. Sed volutpat dui bibendum mi molestie, at volutpat nunc dictum. Fusce sagittis massa id eros scelerisque, eget accumsan magna lacinia. Nullam posuere neque at neque dictum interdum</p>
-					</div>
 					
-					<div class="panel panel-default related-comment">
-						<div class="panel-body">
-							<div class="form-group">
-								<div id="comments" class="blog-comment-info">
-									
-									<h3 id="review-title">Leave your comment  </h3>
-									<input type="hidden" name="blog_article_reply_id" value="0" id="blog-reply-id">
-									<div class="comment-left contacts-form row">
-										<div class="col-md-6">
-											<b>Your Name:</b>
-											<br>
-											<input type="text" name="name" value="" class="form-control">
-											<br>
-										</div>
-										<div class="col-md-12">
-											<b>Your Comment:</b>
-											<br>
-											<textarea rows="6" cols="50" name="text" class="form-control"></textarea>
-											<span style="font-size: 11px;">Note: HTML is not translated!</span>
-											<br>
-											<br>
-										</div>
-										<div class="col-md-4">
-											<b>Enter the code in the box below:</b>
-											<br>
-											<input type="text" name="captcha" style=""
-											value="" class="form-control">
-											<br>
-											<div class="form-group">
-												<img src="image/demo/content/captcha.jpg" alt=""
-												id="captcha">
-											</div>
-										</div>
-									</div>
-									<br>
-									<div class="text-left"><a id="button-comment"
-										class="btn buttonGray"><span>Submit</span></a>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
+					<div class="submit-comment module">
+                        <h3 class="modtitle2">
+                            <span>submit comment</span>
+                        </h3>
+                        <form action="POST" >
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <input type="text" class="form-control" placeholder="Your name">
+                                </div>
+                                <div class="col-md-4">
+                                    <input type="text" class="form-control" placeholder="Your mail">
+                                </div>
+                                <div class="col-md-4">
+                                    <input type="text" class="form-control" placeholder="Your phone">
+                                </div>
+                                <div class=" col-md-12 textarea">
+                                  <textarea class="form-control" rows="7" id="comment" placeholder="Your Messager..."></textarea>
+                              </div>
+                              <div class="col-md-12">
+                                  <button class="btn btn-group">Post Comment</button>
+                              </div>
+                            </div>
+                        </form>
+                        
+                    </div>
 				</div>
 
 			</div>
